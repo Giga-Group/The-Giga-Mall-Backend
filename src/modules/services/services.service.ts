@@ -1,0 +1,43 @@
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Service } from '../../entities/service.entity';
+
+@Injectable()
+export class ServicesService {
+  constructor(
+    @InjectRepository(Service)
+    private serviceRepository: Repository<Service>,
+  ) {}
+
+  async findAll(category?: string) {
+    const where: any = {};
+    if (category) {
+      where.category = category;
+    }
+    return this.serviceRepository.find({
+      where,
+      order: { name: 'ASC' },
+    });
+  }
+
+  async findOne(id: string) {
+    const service = await this.serviceRepository.findOne({
+      where: { id },
+    });
+    if (!service) {
+      throw new NotFoundException(`Service with ID ${id} not found`);
+    }
+    return service;
+  }
+
+  async findBySlug(slug: string) {
+    const service = await this.serviceRepository.findOne({
+      where: { slug },
+    });
+    if (!service) {
+      throw new NotFoundException(`Service with slug ${slug} not found`);
+    }
+    return service;
+  }
+}
