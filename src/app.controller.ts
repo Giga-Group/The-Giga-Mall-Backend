@@ -14,4 +14,11 @@ export class AppController {
   getHello() {
     return this.appService.getHello();
   }
+
+  @Public()
+  @Get('test')
+  @ApiOperation({ summary: 'Test endpoint' })
+  getTest() {
+    return { message: 'hello' };
+  }
 }

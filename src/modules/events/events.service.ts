@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Event } from '../../entities/event.entity';
@@ -26,8 +26,13 @@ export class EventsService {
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid event ID');
+    }
+
     const event = await this.eventRepository.findOne({
-      where: { id },
+      where: { id: numericId },
     });
     if (!event) {
       throw new NotFoundException(`Event with ID ${id} not found`);
@@ -36,14 +41,24 @@ export class EventsService {
   }
 
   async update(id: string, updateEventDto: UpdateEventDto) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid event ID');
+    }
+
     await this.findOne(id);
-    await this.eventRepository.update(id, updateEventDto);
+    await this.eventRepository.update(numericId, updateEventDto);
     return this.findOne(id);
   }
 
   async remove(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid event ID');
+    }
+
     await this.findOne(id);
-    await this.eventRepository.delete(id);
+    await this.eventRepository.delete(numericId);
     return { message: 'Event deleted successfully' };
   }
 }

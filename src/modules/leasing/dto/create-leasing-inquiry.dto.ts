@@ -1,5 +1,6 @@
-import { IsString, IsNotEmpty, IsOptional, IsEmail } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, IsEmail, IsNumber } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
 
 export class CreateLeasingInquiryDto {
   @ApiProperty({ example: 'John Doe' })
@@ -22,8 +23,9 @@ export class CreateLeasingInquiryDto {
   @IsOptional()
   message?: string;
 
-  @ApiProperty({ example: 'project-id', required: false })
-  @IsString()
+  @ApiProperty({ example: 1, required: false })
+  @Type(() => Number)
+  @IsNumber()
   @IsOptional()
-  projectId?: string;
+  projectId?: number;
 }

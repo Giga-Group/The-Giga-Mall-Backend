@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Store } from '../../entities/store.entity';
@@ -20,13 +20,20 @@ export class StoresService {
     }
     return this.storeRepository.find({
       where,
+      relations: ['floor'],
       order: { name: 'ASC' },
     });
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid store ID');
+    }
+
     const store = await this.storeRepository.findOne({
-      where: { id },
+      where: { id: numericId },
+      relations: ['floor'],
     });
     if (!store) {
       throw new NotFoundException(`Store with ID ${id} not found`);
@@ -37,6 +44,7 @@ export class StoresService {
   async findBySlug(slug: string) {
     const store = await this.storeRepository.findOne({
       where: { slug },
+      relations: ['floor'],
     });
     if (!store) {
       throw new NotFoundException(`Store with slug ${slug} not found`);

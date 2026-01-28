@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Project } from '../../entities/project.entity';
@@ -24,8 +24,13 @@ export class ProjectsService {
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid project ID');
+    }
+
     const project = await this.projectRepository.findOne({
-      where: { id },
+      where: { id: numericId },
     });
     if (!project) {
       throw new NotFoundException(`Project with ID ${id} not found`);
@@ -44,14 +49,24 @@ export class ProjectsService {
   }
 
   async update(id: string, updateProjectDto: UpdateProjectDto) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid project ID');
+    }
+
     await this.findOne(id);
-    await this.projectRepository.update(id, updateProjectDto);
+    await this.projectRepository.update(numericId, updateProjectDto);
     return this.findOne(id);
   }
 
   async remove(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid project ID');
+    }
+
     await this.findOne(id);
-    await this.projectRepository.delete(id);
+    await this.projectRepository.delete(numericId);
     return { message: 'Project deleted successfully' };
   }
 }

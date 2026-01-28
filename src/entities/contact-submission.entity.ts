@@ -9,8 +9,8 @@ import { InquiryStatus } from './leasing-inquiry.entity';
 
 @Entity('contact_submissions')
 export class ContactSubmission {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column()
   name: string;

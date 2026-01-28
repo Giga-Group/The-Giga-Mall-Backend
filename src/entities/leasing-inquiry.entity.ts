@@ -15,8 +15,8 @@ export enum InquiryStatus {
 
 @Entity('leasing_inquiries')
 export class LeasingInquiry {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column()
   name: string;
@@ -31,7 +31,7 @@ export class LeasingInquiry {
   message: string;
 
   @Column({ nullable: true })
-  projectId: string;
+  projectId: number;
 
   @Column({
     type: 'enum',

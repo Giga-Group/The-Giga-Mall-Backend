@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Entertainment } from '../../entities/entertainment.entity';
@@ -22,8 +22,13 @@ export class EntertainmentService {
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid entertainment ID');
+    }
+
     const entertainment = await this.entertainmentRepository.findOne({
-      where: { id },
+      where: { id: numericId },
     });
     if (!entertainment) {
       throw new NotFoundException(`Entertainment with ID ${id} not found`);
