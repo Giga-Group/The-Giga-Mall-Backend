@@ -8,8 +8,8 @@ import {
 
 @Entity('entertainments')
 export class Entertainment {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column({ unique: true })
   slug: string;

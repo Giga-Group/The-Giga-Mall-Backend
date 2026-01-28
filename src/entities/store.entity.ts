@@ -4,12 +4,15 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
+import { Floor } from './floor.entity';
 
 @Entity('stores')
 export class Store {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column({ unique: true })
   slug: string;
@@ -30,17 +33,21 @@ export class Store {
   contact: {
     phone?: string;
     email?: string;
-    location?: string;
   };
 
+  // Floor relation instead of nested location object
+  @ManyToOne(() => Floor, (floor) => floor.stores, { nullable: true })
+  @JoinColumn({ name: 'floorId' })
+  floor?: Floor | null;
+
+  @Column({ nullable: true })
+  floorId?: number | null;
+
+  // Raw coordinates for map position (jsonb)
   @Column('jsonb', { nullable: true })
-  location: {
-    level?: string;
-    parking?: string;
-    mapPosition?: {
-      x: number;
-      y: number;
-    };
+  mapPosition?: {
+    x: number;
+    y: number;
   };
 
   @Column({ default: false })

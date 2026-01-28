@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Dine } from '../../entities/dine.entity';
@@ -22,8 +22,13 @@ export class DineService {
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid dine ID');
+    }
+
     const dine = await this.dineRepository.findOne({
-      where: { id },
+      where: { id: numericId },
     });
     if (!dine) {
       throw new NotFoundException(`Restaurant with ID ${id} not found`);

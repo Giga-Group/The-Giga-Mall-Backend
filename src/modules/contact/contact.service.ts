@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { ContactSubmission } from '../../entities/contact-submission.entity';
@@ -25,8 +25,13 @@ export class ContactService {
   }
 
   async findOne(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid contact submission ID');
+    }
+
     const submission = await this.contactSubmissionRepository.findOne({
-      where: { id },
+      where: { id: numericId },
     });
     if (!submission) {
       throw new NotFoundException(`Contact submission with ID ${id} not found`);
@@ -35,14 +40,24 @@ export class ContactService {
   }
 
   async update(id: string, updateContactDto: UpdateContactDto) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid contact submission ID');
+    }
+
     await this.findOne(id);
-    await this.contactSubmissionRepository.update(id, updateContactDto);
+    await this.contactSubmissionRepository.update(numericId, updateContactDto);
     return this.findOne(id);
   }
 
   async remove(id: string) {
+    const numericId = Number(id);
+    if (Number.isNaN(numericId)) {
+      throw new BadRequestException('Invalid contact submission ID');
+    }
+
     await this.findOne(id);
-    await this.contactSubmissionRepository.delete(id);
+    await this.contactSubmissionRepository.delete(numericId);
     return { message: 'Contact submission deleted successfully' };
   }
 }

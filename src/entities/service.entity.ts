@@ -8,8 +8,8 @@ import {
 
 @Entity('services')
 export class Service {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column({ unique: true })
   slug: string;
