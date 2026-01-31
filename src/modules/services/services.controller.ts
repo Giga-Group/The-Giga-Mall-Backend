@@ -10,8 +10,14 @@ export class ServicesController {
   @Get()
   @ApiOperation({ summary: 'Get all services' })
   @ApiQuery({ name: 'category', required: false })
-  findAll(@Query('category') category?: string) {
-    return this.servicesService.findAll(category);
+  @ApiQuery({ name: 'isTopPick', required: false, type: Boolean })
+  findAll(
+    @Query('category') category?: string,
+    @Query('isTopPick') isTopPick?: string,
+  ) {
+    const isTopPickBool =
+      isTopPick !== undefined ? isTopPick === 'true' : undefined;
+    return this.servicesService.findAll(category, isTopPickBool);
   }
 
   @Get('slug/:slug')

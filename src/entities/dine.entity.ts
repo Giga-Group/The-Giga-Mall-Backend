@@ -57,6 +57,9 @@ export class Dine {
   @Column({ nullable: true })
   category: string;
 
+  @Column({ default: false })
+  isTopPick: boolean;
+
   @CreateDateColumn()
   createdAt: Date;
 

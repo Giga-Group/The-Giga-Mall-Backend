@@ -13,6 +13,17 @@ export class LeasingService {
   ) {}
 
   async create(createLeasingInquiryDto: CreateLeasingInquiryDto) {
+    // Check if email already exists
+    const existingInquiry = await this.leasingInquiryRepository.findOne({
+      where: { email: createLeasingInquiryDto.email },
+    });
+
+    if (existingInquiry) {
+      throw new BadRequestException(
+        'An inquiry with this email already exists. Please use a different email address.',
+      );
+    }
+
     const inquiry = this.leasingInquiryRepository.create(
       createLeasingInquiryDto,
     );

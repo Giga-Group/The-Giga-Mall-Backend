@@ -6,25 +6,22 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('events')
-export class Event {
+@Entity('featured_items')
+export class FeaturedItem {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  eventName: string;
+  image: string;
+
+  @Column()
+  name: string;
 
   @Column('text')
   description: string;
 
   @Column()
-  navigateLink: string;
-
-  @Column('varchar')
-  startDate: string;
-
-  @Column('varchar', { nullable: true })
-  endDate: string | null;
+  url: string;
 
   @CreateDateColumn()
   createdAt: Date;

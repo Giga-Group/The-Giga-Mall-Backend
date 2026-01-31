@@ -12,6 +12,8 @@ import { StoresModule } from './modules/stores/stores.module';
 import { DineModule } from './modules/dine/dine.module';
 import { ServicesModule } from './modules/services/services.module';
 import { EntertainmentModule } from './modules/entertainment/entertainment.module';
+import { FeaturedModule } from './modules/featured/featured.module';
+import { CareersModule } from './modules/careers/careers.module';
 
 @Module({
   imports: [
@@ -33,6 +35,8 @@ import { EntertainmentModule } from './modules/entertainment/entertainment.modul
     DineModule,
     ServicesModule,
     EntertainmentModule,
+    FeaturedModule,
+    CareersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

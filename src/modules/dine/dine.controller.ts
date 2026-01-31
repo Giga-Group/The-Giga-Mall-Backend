@@ -10,8 +10,14 @@ export class DineController {
   @Get()
   @ApiOperation({ summary: 'Get all restaurants' })
   @ApiQuery({ name: 'category', required: false })
-  findAll(@Query('category') category?: string) {
-    return this.dineService.findAll(category);
+  @ApiQuery({ name: 'isTopPick', required: false, type: Boolean })
+  findAll(
+    @Query('category') category?: string,
+    @Query('isTopPick') isTopPick?: string,
+  ) {
+    const isTopPickBool =
+      isTopPick !== undefined ? isTopPick === 'true' : undefined;
+    return this.dineService.findAll(category, isTopPickBool);
   }
 
   @Get('slug/:slug')

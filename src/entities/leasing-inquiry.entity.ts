@@ -18,13 +18,13 @@ export class LeasingInquiry {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column('varchar')
   name: string;
 
-  @Column()
+  @Column('varchar', { unique: true })
   email: string;
 
-  @Column()
+  @Column('varchar')
   phone: string;
 
   @Column('text', { nullable: true })

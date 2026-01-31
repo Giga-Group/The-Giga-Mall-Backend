@@ -62,6 +62,9 @@ export class Store {
   @Column({ nullable: true })
   subcategory: string;
 
+  @Column({ default: false })
+  isTopPick: boolean;
+
   @CreateDateColumn()
   createdAt: Date;
 

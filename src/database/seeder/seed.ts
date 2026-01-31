@@ -4,6 +4,9 @@ import { seedStores } from './store.seeder';
 import { seedDine } from './dine.seeder';
 import { seedEntertainment } from './entertainment.seeder';
 import { seedServices } from './service.seeder';
+import { seedFeatured } from './featured.seeder';
+import { seedEvents } from './event.seeder';
+import { seedJobs } from './job.seeder';
 
 async function seed() {
   try {
@@ -24,6 +27,15 @@ async function seed() {
 
     // Seed services
     await seedServices(connectionSource, floorsMap);
+
+    // Seed featured items
+    await seedFeatured(connectionSource);
+
+    // Seed events
+    await seedEvents(connectionSource);
+
+    // Seed jobs
+    await seedJobs(connectionSource);
 
     console.log('Seeding completed!');
   } catch (error) {
