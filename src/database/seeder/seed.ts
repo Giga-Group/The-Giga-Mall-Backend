@@ -1,6 +1,9 @@
 import { connectionSource } from '../../config/typeorm';
 import { seedFloors } from './floor.seeder';
 import { seedStores } from './store.seeder';
+import { seedDine } from './dine.seeder';
+import { seedEntertainment } from './entertainment.seeder';
+import { seedServices } from './service.seeder';
 
 async function seed() {
   try {
@@ -12,6 +15,15 @@ async function seed() {
 
     // Seed stores using the created floors
     await seedStores(connectionSource, floorsMap);
+
+    // Seed a sample dine record
+    await seedDine(connectionSource, floorsMap);
+
+    // Seed entertainment venues
+    await seedEntertainment(connectionSource, floorsMap);
+
+    // Seed services
+    await seedServices(connectionSource, floorsMap);
 
     console.log('Seeding completed!');
   } catch (error) {

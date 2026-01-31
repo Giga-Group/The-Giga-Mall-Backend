@@ -17,6 +17,7 @@ export class ServicesService {
     }
     return this.serviceRepository.find({
       where,
+      relations: ['floor'],
       order: { name: 'ASC' },
     });
   }
@@ -29,6 +30,7 @@ export class ServicesService {
 
     const service = await this.serviceRepository.findOne({
       where: { id: numericId },
+      relations: ['floor'],
     });
     if (!service) {
       throw new NotFoundException(`Service with ID ${id} not found`);
@@ -39,6 +41,7 @@ export class ServicesService {
   async findBySlug(slug: string) {
     const service = await this.serviceRepository.findOne({
       where: { slug },
+      relations: ['floor'],
     });
     if (!service) {
       throw new NotFoundException(`Service with slug ${slug} not found`);

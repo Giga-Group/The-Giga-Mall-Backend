@@ -4,7 +4,10 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
+import { Floor } from './floor.entity';
 
 @Entity('services')
 export class Service {
@@ -30,17 +33,19 @@ export class Service {
   contact: {
     phone?: string;
     email?: string;
-    location?: string;
   };
 
+  @ManyToOne(() => Floor, { nullable: true })
+  @JoinColumn({ name: 'floorId' })
+  floor?: Floor | null;
+
+  @Column({ nullable: true })
+  floorId?: number | null;
+
   @Column('jsonb', { nullable: true })
-  location: {
-    level?: string;
-    parking?: string;
-    mapPosition?: {
-      x: number;
-      y: number;
-    };
+  mapPosition?: {
+    x: number;
+    y: number;
   };
 
   @Column({ default: false })

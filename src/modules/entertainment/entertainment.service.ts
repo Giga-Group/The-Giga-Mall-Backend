@@ -17,6 +17,7 @@ export class EntertainmentService {
     }
     return this.entertainmentRepository.find({
       where,
+      relations: ['floor'],
       order: { name: 'ASC' },
     });
   }
@@ -29,6 +30,7 @@ export class EntertainmentService {
 
     const entertainment = await this.entertainmentRepository.findOne({
       where: { id: numericId },
+      relations: ['floor'],
     });
     if (!entertainment) {
       throw new NotFoundException(`Entertainment with ID ${id} not found`);
@@ -39,6 +41,7 @@ export class EntertainmentService {
   async findBySlug(slug: string) {
     const entertainment = await this.entertainmentRepository.findOne({
       where: { slug },
+      relations: ['floor'],
     });
     if (!entertainment) {
       throw new NotFoundException(
