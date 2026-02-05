@@ -14,6 +14,8 @@ import { ServicesModule } from './modules/services/services.module';
 import { EntertainmentModule } from './modules/entertainment/entertainment.module';
 import { FeaturedModule } from './modules/featured/featured.module';
 import { CareersModule } from './modules/careers/careers.module';
+import { MoviesModule } from './modules/movies/movies.module';
+import { OffersModule } from './modules/offers/offers.module';
 
 @Module({
   imports: [
@@ -37,6 +39,8 @@ import { CareersModule } from './modules/careers/careers.module';
     EntertainmentModule,
     FeaturedModule,
     CareersModule,
+    MoviesModule,
+    OffersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

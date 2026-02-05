@@ -6,28 +6,31 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('events')
-export class Event {
+@Entity('offers')
+export class Offer {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  eventName: string;
+  title: string;
 
   @Column('text')
   description: string;
 
   @Column()
-  navigateLink: string;
+  image: string;
+
+  @Column({ unique: true })
+  slug: string;
+
+  @Column({ nullable: true })
+  type?: string;
 
   @Column('varchar')
   startDate: string;
 
-  @Column('varchar', { nullable: true })
-  endDate: string | null;
-
-  @Column('varchar', { nullable: true })
-  image: string | null;
+  @Column('varchar')
+  endDate: string;
 
   @CreateDateColumn()
   createdAt: Date;
@@ -35,3 +38,4 @@ export class Event {
   @UpdateDateColumn()
   updatedAt: Date;
 }
+

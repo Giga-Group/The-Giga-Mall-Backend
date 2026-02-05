@@ -29,6 +29,9 @@ export class Store {
   @Column({ nullable: true })
   backgroundImage: string;
 
+  @Column('varchar', { nullable: true })
+  mobileViewImage: string | null;
+
   @Column('jsonb', { nullable: true })
   contact: {
     phone?: string;

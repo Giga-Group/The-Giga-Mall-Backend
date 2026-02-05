@@ -6,25 +6,21 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('events')
-export class Event {
+export type MovieStatus = 'Now Showing' | 'Coming Soon';
+
+@Entity('movies')
+export class Movie {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  eventName: string;
+  title: string;
 
   @Column('text')
-  description: string;
-
-  @Column()
-  navigateLink: string;
+  details: string;
 
   @Column('varchar')
-  startDate: string;
-
-  @Column('varchar', { nullable: true })
-  endDate: string | null;
+  status: MovieStatus;
 
   @Column('varchar', { nullable: true })
   image: string | null;
@@ -35,3 +31,4 @@ export class Event {
   @UpdateDateColumn()
   updatedAt: Date;
 }
+

@@ -19,7 +19,7 @@ export class LeasingInquiry {
   id: number;
 
   @Column('varchar')
-  name: string;
+  fullName: string;
 
   @Column('varchar', { unique: true })
   email: string;
@@ -28,17 +28,10 @@ export class LeasingInquiry {
   phone: string;
 
   @Column('text', { nullable: true })
-  message: string;
+  additionalMessage: string;
 
-  @Column({ nullable: true })
-  projectId: number;
-
-  @Column({
-    type: 'enum',
-    enum: InquiryStatus,
-    default: InquiryStatus.PENDING,
-  })
-  status: InquiryStatus;
+  @Column('varchar', { nullable: true })
+  requiredSquareFeet: string | null;
 
   @CreateDateColumn()
   createdAt: Date;

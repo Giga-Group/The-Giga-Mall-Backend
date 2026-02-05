@@ -6,7 +6,7 @@ export class CreateLeasingInquiryDto {
   @ApiProperty({ example: 'John Doe' })
   @IsString()
   @IsNotEmpty()
-  name: string;
+  fullName: string;
 
   @ApiProperty({ example: 'john@example.com' })
   @IsEmail()
@@ -21,11 +21,12 @@ export class CreateLeasingInquiryDto {
   @ApiProperty({ example: 'I am interested in leasing...', required: false })
   @IsString()
   @IsOptional()
-  message?: string;
+  additionalMessage?: string;
 
-  @ApiProperty({ example: 1, required: false })
-  @Type(() => Number)
-  @IsNumber()
+  @ApiProperty({ example: '1500-2000 sq ft', required: false })
+  @IsString()
   @IsOptional()
-  projectId?: number;
+  requiredSquareFeet?: string;
+
+  // projectId removed – no longer stored on leasing inquiries
 }
