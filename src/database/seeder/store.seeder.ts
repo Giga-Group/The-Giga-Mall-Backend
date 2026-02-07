@@ -23,6 +23,7 @@ export async function seedStores(
       floor: floorsMap['1st'],
       floorId: floorsMap['1st']?.id,
       mapPosition: { x: 30, y: 40 },
+      isTopPick: true,
     },
     {
       slug: 'almas',
@@ -65,6 +66,7 @@ export async function seedStores(
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 25, y: 35 },
+      isTopPick: true,
     },
     {
       slug: 'bloon',
@@ -135,6 +137,7 @@ export async function seedStores(
       floor: floorsMap['2nd'],
       floorId: floorsMap['2nd']?.id,
       mapPosition: { x: 70, y: 35 },
+      isTopPick: true,
     },
     {
       slug: 'miniso',

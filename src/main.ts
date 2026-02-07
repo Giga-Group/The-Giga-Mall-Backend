@@ -7,18 +7,12 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Enable CORS - allow requests from Next.js frontend (port 3000)
-  const allowedOrigins = [
-    'http://localhost:3000', // Next.js frontend
-    'http://localhost:3001', // For testing/Swagger
-    process.env.FRONTEND_URL,
-  ].filter((origin): origin is string => Boolean(origin));
-  
+  // Enable CORS - allow all origins for development
   app.enableCors({
-    origin: allowedOrigins.length > 0 ? allowedOrigins : 'http://localhost:3000',
+    origin: true, // Allow all origins
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Name'],
   });
 
   // Global prefix

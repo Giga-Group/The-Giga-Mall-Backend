@@ -23,6 +23,7 @@ export async function seedDine(
     floor: floorsMap['Ground'],
     floorId: floorsMap['Ground']?.id,
     mapPosition: { x: 25, y: 40 },
+    isTopPick: true,
   },
   {
     slug: 'pizzahut',
@@ -34,6 +35,7 @@ export async function seedDine(
     category: 'Restaurant',
     contact: { phone: '+971-50-501-8598' },
     floor: floorsMap['First Floor'],
+    isTopPick: true,
     floorId: floorsMap['First Floor']?.id,
     mapPosition: { x: 30, y: 45 },
   },
@@ -49,6 +51,7 @@ export async function seedDine(
     floor: floorsMap['Ground Floor'],
     floorId: floorsMap['Ground Floor']?.id,
     mapPosition: { x: 35, y: 50 },
+    isTopPick: true,
   },
   {
     slug: 'mcdonalds',

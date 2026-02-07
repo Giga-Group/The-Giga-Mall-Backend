@@ -24,6 +24,7 @@ export async function seedServices(
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 30, y: 40 },
+      isTopPick: true,
     },
     {
       slug: 'd-watson',
@@ -55,6 +56,7 @@ export async function seedServices(
       },
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
+      isTopPick: true,
       mapPosition: { x: 40, y: 50 },
     },
     {
@@ -105,6 +107,7 @@ export async function seedServices(
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 55, y: 65 },
+      isTopPick: true,
     },
     {
       slug: 'aesthetics-and-dental-works',

@@ -10,7 +10,7 @@ export class DineService {
     private dineRepository: Repository<Dine>,
   ) {}
 
-  async findAll(category?: string, isTopPick?: boolean) {
+  async findAll(category?: string, isTopPick?: boolean, limit: number = 10) {
     const where: any = {};
     if (category) {
       where.category = category;
@@ -22,6 +22,7 @@ export class DineService {
       where,
       relations: ['floor'],
       order: { name: 'ASC' },
+      take: limit,
     });
   }
 
