@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, ILike } from 'typeorm';
 import { Store } from '../../entities/store.entity';
 
 @Injectable()
@@ -10,19 +10,53 @@ export class StoresService {
     private storeRepository: Repository<Store>,
   ) {}
 
-  async findAll(category?: string, subcategory?: string) {
-    const where: any = {};
+  async findAll(
+    search?: string,
+    category?: string,
+    subcategory?: string,
+    isTopPick?: boolean,
+    limit: number = 10,
+  ) {
+    const queryBuilder = this.storeRepository
+      .createQueryBuilder('store')
+      .leftJoinAndSelect('store.floor', 'floor');
+
+    // Search filter (searches in name and description)
+    if (search) {
+      queryBuilder.andWhere(
+        '(store.name ILIKE :search OR store.description ILIKE :search)',
+        { search: `%${search}%` },
+      );
+    }
+
+    // Category filter
     if (category) {
-      where.category = category;
+      queryBuilder.andWhere('store.category = :category', { category });
     }
+
+    // Subcategory filter (only works if category is selected)
     if (subcategory) {
-      where.subcategory = subcategory;
+      if (!category) {
+        throw new BadRequestException(
+          'Subcategory filter requires a category to be selected',
+        );
+      }
+      queryBuilder.andWhere('store.subcategory = :subcategory', {
+        subcategory,
+      });
     }
-    return this.storeRepository.find({
-      where,
-      relations: ['floor'],
-      order: { name: 'ASC' },
-    });
+
+    // isTopPick filter
+    if (isTopPick !== undefined) {
+      queryBuilder.andWhere('store.isTopPick = :isTopPick', {
+        isTopPick: isTopPick === true,
+      });
+    }
+
+    // Order and limit
+    queryBuilder.orderBy('store.name', 'ASC').limit(limit);
+
+    return queryBuilder.getMany();
   }
 
   async findOne(id: string) {

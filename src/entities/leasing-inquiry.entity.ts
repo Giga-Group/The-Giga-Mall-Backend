@@ -18,27 +18,20 @@ export class LeasingInquiry {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  name: string;
+  @Column('varchar')
+  fullName: string;
 
-  @Column()
+  @Column('varchar', { unique: true })
   email: string;
 
-  @Column()
+  @Column('varchar')
   phone: string;
 
   @Column('text', { nullable: true })
-  message: string;
+  additionalMessage: string;
 
-  @Column({ nullable: true })
-  projectId: number;
-
-  @Column({
-    type: 'enum',
-    enum: InquiryStatus,
-    default: InquiryStatus.PENDING,
-  })
-  status: InquiryStatus;
+  @Column('varchar', { nullable: true })
+  requiredSquareFeet: string | null;
 
   @CreateDateColumn()
   createdAt: Date;

@@ -10,7 +10,7 @@ export class EntertainmentService {
     private entertainmentRepository: Repository<Entertainment>,
   ) {}
 
-  async findAll(category?: string) {
+  async findAll(category?: string, limit: number = 10) {
     const where: any = {};
     if (category) {
       where.category = category;
@@ -19,6 +19,7 @@ export class EntertainmentService {
       where,
       relations: ['floor'],
       order: { name: 'ASC' },
+      take: limit,
     });
   }
 

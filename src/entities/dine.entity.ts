@@ -29,6 +29,9 @@ export class Dine {
   @Column({ nullable: true })
   backgroundImage: string;
 
+  @Column('varchar', { nullable: true })
+  mobileViewImage: string | null;
+
   @Column('jsonb', { nullable: true })
   contact: {
     phone?: string;
@@ -56,6 +59,9 @@ export class Dine {
 
   @Column({ nullable: true })
   category: string;
+
+  @Column({ default: false })
+  isTopPick: boolean;
 
   @CreateDateColumn()
   createdAt: Date;

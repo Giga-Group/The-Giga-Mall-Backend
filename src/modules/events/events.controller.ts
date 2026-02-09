@@ -1,5 +1,5 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiQuery } from '@nestjs/swagger';
+import { Controller, Get } from '@nestjs/common';
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
 import { EventsService } from './events.service';
 
 @ApiTags('Events')
@@ -9,15 +9,7 @@ export class EventsController {
 
   @Get()
   @ApiOperation({ summary: 'Get all events' })
-  @ApiQuery({ name: 'activeOnly', required: false, type: Boolean })
-  findAll(@Query('activeOnly') activeOnly?: string) {
-    const active = activeOnly === 'true';
-    return this.eventsService.findAll(active);
-  }
-
-  @Get(':id')
-  @ApiOperation({ summary: 'Get event by ID' })
-  findOne(@Param('id') id: string) {
-    return this.eventsService.findOne(id);
+  findAll() {
+    return this.eventsService.findAll();
   }
 }

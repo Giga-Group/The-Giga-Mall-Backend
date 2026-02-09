@@ -10,15 +10,19 @@ export class ServicesService {
     private serviceRepository: Repository<Service>,
   ) {}
 
-  async findAll(category?: string) {
+  async findAll(category?: string, isTopPick?: boolean, limit: number = 10) {
     const where: any = {};
     if (category) {
       where.category = category;
+    }
+    if (isTopPick !== undefined) {
+      where.isTopPick = isTopPick === true;
     }
     return this.serviceRepository.find({
       where,
       relations: ['floor'],
       order: { name: 'ASC' },
+      take: limit,
     });
   }
 

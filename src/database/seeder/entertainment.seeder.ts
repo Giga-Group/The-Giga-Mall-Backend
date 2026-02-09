@@ -16,6 +16,7 @@ export async function seedEntertainment(
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
       logo: '/logo/CinepaxLogo.png',
       backgroundImage: '/Cinepax/c3.jpg',
+      mobileViewImage: null,
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -33,6 +34,7 @@ export async function seedEntertainment(
         'Strike up some fun at our modern bowling alley! Perfect for families, friends, and corporate events. Enjoy state-of-the-art lanes, scoring systems, and a vibrant atmosphere.',
       logo: '/logo/Round3BowlingAlleyLogo.png',
       backgroundImage: '/Entertain/bowling 3.jpg',
+      mobileViewImage: '/Entertain/bowling mobile.jpg',
       category: 'Sports & Recreation',
       contact: {
         phone: '+971-50-501-8599',
@@ -48,6 +50,7 @@ export async function seedEntertainment(
         'Get ready for an adrenaline rush at VI Rides Arcade! Featuring the latest arcade games, simulators, and interactive experiences for all ages.',
       logo: '/logo/Virides.jpg',
       backgroundImage: '/Entertain/VI Rides Horizontal.jpg',
+      mobileViewImage: '/Entertain/VI Rides mobile.jpg',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -63,6 +66,7 @@ export async function seedEntertainment(
         'Step into the future of entertainment at VR Kings! Immerse yourself in virtual reality experiences, from thrilling adventures to creative simulations.',
       logo: '/logo/VRKingsLogo.png',
       backgroundImage: '/Entertain/VR Kings Horizontal.jpg',
+      mobileViewImage: '/Entertain/VR Kings mobile.jpg',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -78,6 +82,7 @@ export async function seedEntertainment(
         'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
       logo: '/logo/FunCityLogo.png',
       backgroundImage: '/Entertain/Funcity Horizontal.jpg',
+      mobileViewImage: '/Entertain/Funcity mobile.jpg',
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8599',
@@ -93,6 +98,7 @@ export async function seedEntertainment(
         'Embark on a cinematic journey at SpaceCraft! Premium movie experience with cutting-edge technology, luxury seating, and an immersive atmosphere.',
       logo: '/logo/SpaceCraftLogo.png',
       backgroundImage: '/Entertain/SpaceCraft Horizontal.jpg',
+      mobileViewImage: '/Entertain/SpaceCraft mobile.jpg',
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -108,6 +114,7 @@ export async function seedEntertainment(
         'All aboard the Fun Express! Enjoy a delightful train ride through the mall, perfect for families and children. A fun and memorable experience for visitors of all ages.',
       logo: '/logo/FunExpressTrainLogo.png',
       backgroundImage: '/Entertain/train web.jpg',
+      mobileViewImage: null,
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8600',
@@ -119,16 +126,9 @@ export async function seedEntertainment(
   ];
 
   for (const data of samples) {
-    const existing = await entertainmentRepository.findOne({
-      where: { slug: data.slug! },
-    });
-    if (!existing) {
-      const entertainment = entertainmentRepository.create(data);
-      await entertainmentRepository.save(entertainment);
-      console.log(`Created entertainment: ${entertainment.name}`);
-    } else {
-      console.log(`Entertainment ${data.slug} already exists`);
-    }
+    const entertainment = entertainmentRepository.create(data);
+    await entertainmentRepository.save(entertainment);
+    console.log(`Created entertainment: ${entertainment.name}`);
   }
 }
 

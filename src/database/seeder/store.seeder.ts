@@ -16,12 +16,14 @@ export async function seedStores(
         'A major Pakistani fashion and textile brand known for its wide range of clothing and fabric products for men, women, and children. It blends contemporary designs with traditional elements in ready-to-wear, unstitched collections, and seasonal fabrics, appealing to diverse style needs with vibrant prints and quality materials.',
       logo: '/logo/alkaram logo.jpg',
       backgroundImage: '/shops/alkaram.jpg',
+      mobileViewImage: '/shops/alkaram-mobile.jpg',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8600' },
       floor: floorsMap['1st'],
       floorId: floorsMap['1st']?.id,
       mapPosition: { x: 30, y: 40 },
+      isTopPick: true,
     },
     {
       slug: 'almas',
@@ -29,6 +31,7 @@ export async function seedStores(
       description: "A fashion brand in Pakistan offering stylish clothing for everyday and casual wear. It's generally considered a trendy, accessible retail label with a range of apparel options for the modern shopper.",
       logo: '/logo/almas logo.png',
       backgroundImage: '/shops/almas.jpeg',
+      mobileViewImage: '/shops/almas-mobile.jpg',
       category: 'Fashion',
       subcategory: "Women's Fashion",
       contact: { phone: '+971-50-501-8601' },
@@ -42,6 +45,7 @@ export async function seedStores(
       description: 'A Pakistani clothing label under the Junaid Jamshed group that offers ready-to-wear and unstitched apparel for men, women, and children, including kurtas, formal wear, and seasonal collections.',
       logo: '/logo/almirah.jpg',
       backgroundImage: '/shops/almirah.jpeg',
+      mobileViewImage: '/shops/almirah-mobile.jpg',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8602' },
@@ -55,12 +59,14 @@ export async function seedStores(
       description: 'A fashion brand inspired by traditional batik artistry, combining cultural textile techniques with modern clothing designs to produce unique prints and patterns for contemporary wardrobes.',
       logo: '/logo/batik studio.jpg',
       backgroundImage: '/shops/batik-studio.jpg',
+      mobileViewImage: '/shops/batikstudio-mobile.jpg',
       category: 'Fashion',
       subcategory: 'Traditional & Ethnic Wear',
       contact: { phone: '+971-50-501-8603' },
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 25, y: 35 },
+      isTopPick: true,
     },
     {
       slug: 'bloon',
@@ -68,6 +74,7 @@ export async function seedStores(
       description: "A contemporary fashion brand often associated with youthful, vibrant casual wear. It's known locally as a multi-brand or standalone label offering trendy styles for everyday fashion.",
       logo: '/logo/bloon.jpg',
       backgroundImage: '/shops/Bloon web.JPG',
+      mobileViewImage: '/shops/Bloon mobile.JPG',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8604' },
@@ -81,6 +88,7 @@ export async function seedStores(
       description: "A popular youth-oriented clothing brand in Pakistan offering casual western-style apparel such as jeans, shirts, tees, and activewear. It's known for affordable, trendy pieces that appeal to a younger demographic.",
       logo: '/logo/Breakout logo.png',
       backgroundImage: '/shops/breakout.jpeg',
+      mobileViewImage: '/shops/breakout-mobile.jpg',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8606' },
@@ -94,6 +102,7 @@ export async function seedStores(
       description: "A premium men's clothing brand from Pakistan (often under 'The Cambridge Shop') known for its classic and simple pieces including shirts, kurtas, and casual wear. It emphasizes understated style and quality basics.",
       logo: '/logo/cambridge logo.jpg',
       backgroundImage: '/shops/cambridge.jpeg',
+      mobileViewImage: '/shops/cambridge-mobile.jpg',
       category: 'Fashion',
       subcategory: "Men's Fashion",
       contact: { phone: '+971-50-501-8607' },
@@ -107,6 +116,7 @@ export async function seedStores(
       description: "Also known as J., this is a well-known Pakistani fashion brand founded by the late Junaid Jamshed. It started with traditional menswear and expanded into womenswear, kidswear, and accessories with a focus on modest, elegant clothing rooted in cultural aesthetics.",
       logo: '/logo/junaid jamshed logo.png',
       backgroundImage: '/shops/junaid-jamshed.jpeg',
+      mobileViewImage: '/shops/junaidjamshed-mobile.jpg',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8608' },
@@ -120,12 +130,14 @@ export async function seedStores(
       description: "A leading Pakistani fashion brand recognized for its embroidered and printed fabrics that blend traditional South Asian artistry with modern silhouettes. Kayseria is known for high-quality designs that enhance everyday and festive attire, especially for women.",
       logo: '/logo/kayseria logo.jpg',
       backgroundImage: '/shops/kayseria web.jpeg',
+      mobileViewImage: '/shops/kayseria-mobile.jpg',
       category: 'Fashion',
       subcategory: "Women's Fashion",
       contact: { phone: '+971-50-501-8609' },
       floor: floorsMap['2nd'],
       floorId: floorsMap['2nd']?.id,
       mapPosition: { x: 70, y: 35 },
+      isTopPick: true,
     },
     {
       slug: 'miniso',
@@ -133,6 +145,7 @@ export async function seedStores(
       description: 'A global lifestyle retailer known for affordable, creatively designed everyday products including home goods, cosmetics, stationery, toys, and accessories with a fun, minimalist style.',
       logo: '/logo/miniso logo.jpg',
       backgroundImage: '/shops/miniso.jpeg',
+      mobileViewImage: '/shops/miniso-mobile.jpg',
       category: 'Home & Lifestyle',
       subcategory: '',
       contact: { phone: '+971-50-501-8610' },
@@ -146,6 +159,7 @@ export async function seedStores(
       description: "A kids' store offering toys, games, and engaging activities designed to entertain and delight children of all ages.",
       logo: '/logo/BabysDayOutLogo.png',
       backgroundImage: '/shops/Babysdayoutweb.JPG',
+      mobileViewImage: '/shops/Babysdayout-mobile.JPG',
       category: 'Toys',
       subcategory: '',
       contact: { phone: '+971-50-501-8610' },
@@ -172,6 +186,7 @@ export async function seedStores(
       description: 'A popular Pakistani fashion brand offering unstitched fabric, ready‑to‑wear clothing, accessories, and fragrances for men, women, and kids with a focus on style and value.',
       logo: '/logo/bonanza satrangi.jpg',
       backgroundImage: '/shops/bonanza.jpeg',
+      mobileViewImage: '/shops/Bonanza Satrangi mobile.JPG',
       category: 'Fashion',
       subcategory: 'Multi-Brand Fashion',
       contact: { phone: '+971-50-501-8610' },
@@ -185,6 +200,7 @@ export async function seedStores(
       logo: '/logo/aromaconceptslogo.png',
       description: 'A store specializing in fragrances and scented products such as perfumes, candles, and aromatic home items to enhance ambiance.',
       backgroundImage: '/shops/Aroma Concepts web.JPG',
+      mobileViewImage: '/shops/Aroma Concepts mobile.JPG',
       category: 'Beauty & Fragrances',
       subcategory: 'Fragrances',
       contact: { phone: '+971-50-501-8610' },
@@ -198,6 +214,7 @@ export async function seedStores(
       logo: '/logo/EasterArtnHandicraft.png',
       description: 'A boutique showcasing traditional art, décor pieces, and handcrafted cultural items reflecting heritage craftsmanship.',
       backgroundImage: '/shops/Eastern Art and HandiCraft web.JPG',
+      mobileViewImage: '/shops/Eastern Art and HandiCraft mobile.JPG',
       category: 'Home & Lifestyle',
       subcategory: '',
       contact: { phone: '+971-50-501-8610' },
@@ -2665,16 +2682,9 @@ export async function seedStores(
   ];
 
   for (const storeData of sampleStores) {
-    const existing = await storeRepository.findOne({
-      where: { slug: storeData.slug! },
-    });
-    if (!existing) {
-      const store = storeRepository.create(storeData);
-      await storeRepository.save(store);
-      console.log(`Created store: ${store.name}`);
-    } else {
-      console.log(`Store ${storeData.slug} already exists`);
-    }
+    const store = storeRepository.create(storeData);
+    await storeRepository.save(store);
+    console.log(`Created store: ${store.name}`);
   }
 }
 

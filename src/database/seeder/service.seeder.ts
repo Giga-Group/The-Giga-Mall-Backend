@@ -16,6 +16,7 @@ export async function seedServices(
         'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
       logo: '/logo/carrefour.jpeg',
       backgroundImage: '/Services/Carrefour web.JPG',
+      mobileViewImage: null,
       category: 'Grocery',
       contact: {
         phone: '+971-50-501-8610',
@@ -23,6 +24,7 @@ export async function seedServices(
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 30, y: 40 },
+      isTopPick: true,
     },
     {
       slug: 'd-watson',
@@ -31,6 +33,7 @@ export async function seedServices(
         'A trusted health and beauty retailer offering skincare, cosmetics, personal care products, and wellness essentials.',
       logo: '/logo/DwastsonLogo.png',
       backgroundImage: '/Services/D watson web.JPG',
+      mobileViewImage: null,
       category: 'Beauty',
       contact: {
         phone: '+971-50-501-8610',
@@ -46,12 +49,14 @@ export async function seedServices(
         'Full-service Islamic banking with Sharia-compliant financial solutions. Open your account, apply for loans, and access all banking services.',
       logo: '/logo/dubai islamic bank.jpeg',
       backgroundImage: '/Services/Dubai Islamic Bank web.JPG',
+      mobileViewImage: null,
       category: 'Bank',
       contact: {
         phone: '+971-50-501-8610',
       },
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
+      isTopPick: true,
       mapPosition: { x: 40, y: 50 },
     },
     {
@@ -61,6 +66,7 @@ export async function seedServices(
         'Universal banking services with ATM access. Personal and business banking solutions available.',
       logo: '/logo/ubl.jpeg',
       backgroundImage: '/Services/ubl web.JPG',
+      mobileViewImage: null,
       category: 'Bank',
       contact: {
         phone: '+971-50-501-8610',
@@ -76,6 +82,7 @@ export async function seedServices(
         'Premium banking services with comprehensive financial solutions. Personal and business banking with dedicated customer service.',
       logo: '/logo/AlRajLogo.png',
       backgroundImage: '/Services/Al Raj web.JPG',
+      mobileViewImage: null,
       category: 'Bank',
       contact: {
         phone: '+971-50-501-8610',
@@ -91,6 +98,7 @@ export async function seedServices(
         'Aesthetic & Skincare Clinic. Highly qualified team of dermatologists, cosmetologists, and certified aestheticians. Offering a wide range of treatments including laser hair removal, whitening, HIFU, BB Glow, PRP, Hydra Facial, hair transplant, chemical peeling, thread lifting, Botox, fillers, Pico Laser, carbon facial, permanent makeup, tattoo removal, and slimming drips. Ladies only.',
       logo: '/logo/derma orchard.jpg',
       backgroundImage: '/Services/derma orchid web.JPG',
+      mobileViewImage: '/Services/derma orchid mobile.JPG',
       category: 'Clinic',
       contact: {
         phone: '+92-332-9785371',
@@ -99,6 +107,7 @@ export async function seedServices(
       floor: floorsMap['Ground'],
       floorId: floorsMap['Ground']?.id,
       mapPosition: { x: 55, y: 65 },
+      isTopPick: true,
     },
     {
       slug: 'aesthetics-and-dental-works',
@@ -107,6 +116,7 @@ export async function seedServices(
         'Dental Clinic & Cosmetic Centre offering comprehensive dental and aesthetic services. Services include Dental Implants/Bridges, Dentures/Crowns, Dental cleaning & whitening, Fixed Braces, Hydrafacial/Chemical peel, PRP for Hair & face, and Full body whitening. Experience expert care for your dental and cosmetic needs.',
       logo: '/logo/aesthetic and dental works.jpg',
       backgroundImage: '/Services/aesthetic n dental work web.JPG',
+      mobileViewImage: '/Services/aesthetic n dental work mobile.JPG',
       category: 'Clinic',
       contact: {
         phone: '+92-333-5545887',
@@ -122,6 +132,7 @@ export async function seedServices(
         'Integrative Medical Center offering comprehensive dental care, holistic skin care, and advanced IV therapies. Services include Integrative Dental Care, Holistic Skin Care, Whitening Injections, Glutathione Drips, Skin Brightening Shots, Fat Loss Drips, Stamina Boosters, Immunity Support Drips, IV Probiotics & Peptides, Nutritional Intravenous Therapy, NAD+ Glutathione Therapy, IV for Anti Aging, and Male Hormone Enhancers. Your family dental clinic and skin care destination.',
       logo: '/logo/IMC.jpg',
       backgroundImage: '/Services/imc web.JPG',
+      mobileViewImage: '/Services/imc mobile.JPG',
       category: 'Clinic',
       contact: {
         phone: '+92-51-6107253'
@@ -137,6 +148,7 @@ export async function seedServices(
         'Professional currency exchange services for all major currencies. We buy and sell currencies at competitive rates. Also offering international money transfer services through Western Union, MoneyGram, and Ria Money Transfer. Convenient and secure currency exchange for all your travel and business needs.',
       logo: '/logo/pakistan currencey exchange.jpg',
       backgroundImage: '/Services/pakistan currency exchange web.JPG',
+      mobileViewImage: '/Services/pakistan currency exchange mobile.JPG',
       category: 'Currency Exchange',
       contact: {
         phone: '+971-50-501-8611',
@@ -152,6 +164,7 @@ export async function seedServices(
         'A beautifully designed prayer hall providing a serene and peaceful space for daily prayers and spiritual reflection. Open to all visitors seeking a moment of tranquility and connection.',
       logo: '/logo/Mosque.png',
       backgroundImage: '/Services/mosq web.JPG',
+      mobileViewImage: null,
       category: 'Religious',
       contact: {
         phone: '+971-50-501-8612',
@@ -163,16 +176,9 @@ export async function seedServices(
   ];
 
   for (const data of samples) {
-    const existing = await serviceRepository.findOne({
-      where: { slug: data.slug! },
-    });
-    if (!existing) {
-      const service = serviceRepository.create(data);
-      await serviceRepository.save(service);
-      console.log(`Created service: ${service.name}`);
-    } else {
-      console.log(`Service ${data.slug} already exists`);
-    }
+    const service = serviceRepository.create(data);
+    await serviceRepository.save(service);
+    console.log(`Created service: ${service.name}`);
   }
 }
 

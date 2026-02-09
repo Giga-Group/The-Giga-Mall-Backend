@@ -12,19 +12,22 @@ export class Event {
   id: number;
 
   @Column()
-  title: string;
+  eventName: string;
 
   @Column('text')
   description: string;
 
-  @Column({ nullable: true })
-  image: string;
+  @Column()
+  navigateLink: string;
 
-  @Column({ type: 'timestamp', nullable: true })
-  eventDate: Date;
+  @Column('varchar')
+  startDate: string;
 
-  @Column({ default: true })
-  isActive: boolean;
+  @Column('varchar', { nullable: true })
+  endDate: string | null;
+
+  @Column('varchar', { nullable: true })
+  image: string | null;
 
   @CreateDateColumn()
   createdAt: Date;

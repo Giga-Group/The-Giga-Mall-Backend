@@ -13,6 +13,16 @@ export class ContactService {
   ) {}
 
   async create(createContactDto: CreateContactDto) {
+    const existing = await this.contactSubmissionRepository.findOne({
+      where: { email: createContactDto.email },
+    });
+
+    if (existing) {
+      throw new BadRequestException(
+        'A message with this email already exists. Please use a different email address.',
+      );
+    }
+
     const submission =
       this.contactSubmissionRepository.create(createContactDto);
     return this.contactSubmissionRepository.save(submission);
