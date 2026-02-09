@@ -38,6 +38,10 @@ RUN npm ci --only=production && npm cache clean --force
 # Copy built application from build stage
 COPY --from=build /app/dist ./dist
 
+# Copy entrypoint script
+COPY docker-entrypoint.sh ./
+RUN chmod +x docker-entrypoint.sh
+
 # Create a non-root user
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nestjs -u 1001
@@ -49,5 +53,5 @@ USER nestjs
 # Expose port (Railway will set PORT env var automatically)
 EXPOSE 3001
 
-# Start the application
-CMD ["node", "dist/main.js"]
+# Use entrypoint script to run migrations before starting app
+ENTRYPOINT ["./docker-entrypoint.sh"]

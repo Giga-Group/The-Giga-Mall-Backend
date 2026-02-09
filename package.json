@@ -21,8 +21,10 @@
   "typeorm": "typeorm-ts-node-commonjs",
   "migration:generate": "npm run typeorm -- migration:generate -d src/database/data-source.ts",
     "migration:run": "npm run typeorm -- migration:run -d src/database/data-source.ts",
+    "migration:run:prod": "node dist/database/run-migrations.js",
     "migration:revert": "npm run typeorm -- migration:revert -d src/database/data-source.ts",
     "seed": "ts-node src/database/seeder/seed.ts",
+    "seed:prod": "node dist/database/seeder/seed.js",
     "db:reset": "ts-node src/database/seeder/reset-db.ts && npm run migration:run && npm run seed"
 },
   "dependencies": {
