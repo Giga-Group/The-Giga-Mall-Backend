@@ -1,5 +1,5 @@
-import { Controller, Get, Param } from '@nestjs/common';
-import { ApiTags, ApiOperation } from '@nestjs/swagger';
+import { Controller, Get, Param, Query } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiQuery } from '@nestjs/swagger';
 import { ProjectsService } from './projects.service';
 
 @ApiTags('Projects')
@@ -9,8 +9,14 @@ export class ProjectsController {
 
   @Get()
   @ApiOperation({ summary: 'Get all projects' })
-  findAll() {
-    return this.projectsService.findAll();
+  @ApiQuery({
+    name: 'isCompleted',
+    required: false,
+    type: String,
+    description: 'Filter by completion status: 0 for ongoing, 1 for completed',
+  })
+  findAll(@Query('isCompleted') isCompleted?: string) {
+    return this.projectsService.findAll(isCompleted);
   }
 
   @Get('slug/:slug')
