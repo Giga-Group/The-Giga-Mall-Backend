@@ -46,6 +46,9 @@ export class Project {
   @Column('jsonb', { nullable: true })
   details: any;
 
+  @Column({ type: 'boolean', default: false })
+  isCompleted: boolean;
+
   @CreateDateColumn()
   createdAt: Date;
 
