@@ -10,6 +10,7 @@ import { seedJobs } from './job.seeder';
 import { seedMovies } from './movie.seeder';
 import { seedOffers } from './offer.seeder';
 import { seedUploadedSvgs } from './uploaded-svg.seeder';
+import { seedProjects } from './project.seeder';
 
 async function seed() {
   try {
@@ -59,6 +60,10 @@ async function seed() {
 
     // Seed uploaded SVGs
     await seedUploadedSvgs(connectionSource, floorsMap);
+    console.log('');
+
+    // Seed projects
+    await seedProjects(connectionSource);
     console.log('');
 
     console.log('✓ Seeding completed successfully!');
