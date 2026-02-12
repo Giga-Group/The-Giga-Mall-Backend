@@ -14,8 +14,8 @@ export async function seedEntertainment(
       name: 'Cinepax Cinema',
       description:
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
-      logo: '/logo/CinepaxLogo.png',
-      backgroundImage: '/Cinepax/c3.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/CinepaxLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Cinepax/c1.jpg',
       mobileViewImage: null,
       category: 'Cinema',
       contact: {
@@ -32,9 +32,9 @@ export async function seedEntertainment(
       name: 'Bowling Alley',
       description:
         'Strike up some fun at our modern bowling alley! Perfect for families, friends, and corporate events. Enjoy state-of-the-art lanes, scoring systems, and a vibrant atmosphere.',
-      logo: '/logo/Round3BowlingAlleyLogo.png',
-      backgroundImage: '/Entertain/bowling 3.jpg',
-      mobileViewImage: '/Entertain/bowling mobile.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/Round3BowlingAlleyLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/bowling%203.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/bowling%20mobile.jpg',
       category: 'Sports & Recreation',
       contact: {
         phone: '+971-50-501-8599',
@@ -48,9 +48,9 @@ export async function seedEntertainment(
       name: 'VI Rides Arcade',
       description:
         'Get ready for an adrenaline rush at VI Rides Arcade! Featuring the latest arcade games, simulators, and interactive experiences for all ages.',
-      logo: '/logo/Virides.jpg',
-      backgroundImage: '/Entertain/VI Rides Horizontal.jpg',
-      mobileViewImage: '/Entertain/VI Rides mobile.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/Virides.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/VI%20Rides%20Horizontal.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/VI%20Rides%20mobile.jpg',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -64,9 +64,9 @@ export async function seedEntertainment(
       name: 'VR Kings',
       description:
         'Step into the future of entertainment at VR Kings! Immerse yourself in virtual reality experiences, from thrilling adventures to creative simulations.',
-      logo: '/logo/VRKingsLogo.png',
-      backgroundImage: '/Entertain/VR Kings Horizontal.jpg',
-      mobileViewImage: '/Entertain/VR Kings mobile.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/VRKingsLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/VR%20Kings%20Horizontal.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/VR%20Kings%20mobile.jpg',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -80,9 +80,9 @@ export async function seedEntertainment(
       name: 'Funcity',
       description:
         'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
-      logo: '/logo/FunCityLogo.png',
-      backgroundImage: '/Entertain/Funcity Horizontal.jpg',
-      mobileViewImage: '/Entertain/Funcity mobile.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/FunCityLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/Funcity%20Horizontal.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/Funcity%20mobile.jpg',
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8599',
@@ -96,9 +96,9 @@ export async function seedEntertainment(
       name: 'SpaceCraft',
       description:
         'Embark on a cinematic journey at SpaceCraft! Premium movie experience with cutting-edge technology, luxury seating, and an immersive atmosphere.',
-      logo: '/logo/SpaceCraftLogo.png',
-      backgroundImage: '/Entertain/SpaceCraft Horizontal.jpg',
-      mobileViewImage: '/Entertain/SpaceCraft mobile.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/SpaceCraftLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/SpaceCraft%20Horizontal.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/SpaceCraft%20mobile.jpg',
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -112,8 +112,8 @@ export async function seedEntertainment(
       name: 'Fun Express Train',
       description:
         'All aboard the Fun Express! Enjoy a delightful train ride through the mall, perfect for families and children. A fun and memorable experience for visitors of all ages.',
-      logo: '/logo/FunExpressTrainLogo.png',
-      backgroundImage: '/Entertain/train web.jpg',
+      logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/FunExpressTrainLogo.png',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/train%20web.jpg',
       mobileViewImage: null,
       category: 'Family Entertainment',
       contact: {

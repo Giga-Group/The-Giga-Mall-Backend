@@ -17,10 +17,18 @@ export class ProjectsService {
     return this.projectRepository.save(project);
   }
 
-  async findAll() {
-    return this.projectRepository.find({
-      order: { createdAt: 'DESC' },
-    });
+  async findAll(isCompleted?: string) {
+    const queryBuilder = this.projectRepository.createQueryBuilder('project');
+
+    // Filter by isCompleted if provided
+    if (isCompleted !== undefined) {
+      const isCompletedBool = isCompleted === '1' || isCompleted === 'true';
+      queryBuilder.where('project.isCompleted = :isCompleted', {
+        isCompleted: isCompletedBool,
+      });
+    }
+
+    return queryBuilder.orderBy('project.createdAt', 'DESC').getMany();
   }
 
   async findOne(id: string) {
