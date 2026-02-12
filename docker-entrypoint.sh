@@ -2,7 +2,6 @@
 set -e
 
 echo "=========================================="
-echo "=========================================="
 echo "Starting application startup..."
 echo "=========================================="
 
@@ -14,6 +13,7 @@ fi
 
 echo "DATABASE_URL is set (connection string provided)"
 echo "PORT: ${PORT:-not set, will use default 3001}"
+echo "FRESH_DATA: ${FRESH_DATA:-not set}"
 echo ""
 
 # Wait for database to be ready (with timeout)
@@ -31,6 +31,46 @@ until node -e "const { Client } = require('pg'); const client = new Client({ con
   sleep 2
 done
 echo ""
+
+# Check if FRESH_DATA is set to true - if so, drop schema and reset database
+echo "=========================================="
+echo "Checking FRESH_DATA environment variable..."
+echo "FRESH_DATA value: '${FRESH_DATA:-not set}'"
+echo "=========================================="
+
+if [ "$FRESH_DATA" = "true" ]; then
+  echo "⚠️  WARNING: FRESH_DATA is set to 'true'"
+  echo "⚠️  This will DROP ALL DATA and recreate the database schema!"
+  echo "=========================================="
+  echo "Resetting database (dropping schema)..."
+  echo "=========================================="
+  
+  if [ ! -f "dist/database/reset-database.js" ]; then
+    echo "ERROR: Reset script not found at dist/database/reset-database.js"
+    echo "Checking if dist/database directory exists..."
+    ls -la dist/database/ 2>&1 || echo "Directory does not exist"
+    exit 1
+  else
+    echo "✓ Reset script found at dist/database/reset-database.js"
+    echo "Executing reset script..."
+    
+    if node dist/database/reset-database.js; then
+      echo "=========================================="
+      echo "✓ Database reset completed successfully!"
+      echo "=========================================="
+    else
+      EXIT_CODE=$?
+      echo "=========================================="
+      echo "ERROR: Database reset failed with exit code $EXIT_CODE"
+      echo "=========================================="
+      exit 1
+    fi
+  fi
+  echo ""
+else
+  echo "Skipping database reset (FRESH_DATA is not set to 'true')"
+  echo ""
+fi
 
 # Run migrations using the migration runner script
 echo "=========================================="
@@ -51,8 +91,13 @@ echo "Checking RUN_SEEDERS environment variable..."
 echo "RUN_SEEDERS value: '${RUN_SEEDERS:-not set}'"
 echo "=========================================="
 
-if [ "$RUN_SEEDERS" = "true" ]; then
-  echo "✓ RUN_SEEDERS is set to 'true' - seeders will run"
+# If FRESH_DATA is true, automatically run seeders (no need for RUN_SEEDERS)
+if [ "$FRESH_DATA" = "true" ] || [ "$RUN_SEEDERS" = "true" ]; then
+  if [ "$FRESH_DATA" = "true" ]; then
+    echo "✓ FRESH_DATA is set to 'true' - seeders will run automatically after reset"
+  else
+    echo "✓ RUN_SEEDERS is set to 'true' - seeders will run"
+  fi
   echo "=========================================="
   echo "Running database seeders..."
   echo "=========================================="
