@@ -108,9 +108,15 @@ export async function seedOffers(dataSource: DataSource): Promise<void> {
   ];
 
   for (const data of samples) {
-    const offer = offerRepository.create(data);
-    await offerRepository.save(offer);
-    console.log(`Created offer: ${offer.title}`);
+    // Check if offer already exists by slug
+    const existing = await offerRepository.findOne({ where: { slug: data.slug } });
+    if (!existing) {
+      const offer = offerRepository.create(data);
+      await offerRepository.save(offer);
+      console.log(`Created offer: ${offer.title}`);
+    } else {
+      console.log(`Offer already exists: ${data.slug}`);
+    }
   }
 }
 

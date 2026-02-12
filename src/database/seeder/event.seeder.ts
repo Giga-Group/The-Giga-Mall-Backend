@@ -82,8 +82,16 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
   ];
 
   for (const data of samples) {
-    const event = eventRepository.create(data);
-    await eventRepository.save(event);
-    console.log(`Created event: ${event.eventName}`);
+    // Check if event already exists by eventName and startDate combination
+    const existing = await eventRepository.findOne({ 
+      where: { eventName: data.eventName, startDate: data.startDate } 
+    });
+    if (!existing) {
+      const event = eventRepository.create(data);
+      await eventRepository.save(event);
+      console.log(`Created event: ${event.eventName}`);
+    } else {
+      console.log(`Event already exists: ${data.eventName} (${data.startDate})`);
+    }
   }
 }

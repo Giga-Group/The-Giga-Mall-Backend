@@ -58,9 +58,17 @@ export async function seedMovies(dataSource: DataSource): Promise<void> {
   ];
 
   for (const data of samples) {
-    const movie = movieRepository.create(data);
-    await movieRepository.save(movie);
-    console.log(`Created movie: ${movie.title}`);
+    // Check if movie already exists by title and status combination
+    const existing = await movieRepository.findOne({ 
+      where: { title: data.title, status: data.status } 
+    });
+    if (!existing) {
+      const movie = movieRepository.create(data);
+      await movieRepository.save(movie);
+      console.log(`Created movie: ${movie.title}`);
+    } else {
+      console.log(`Movie already exists: ${data.title} (${data.status})`);
+    }
   }
 }
 

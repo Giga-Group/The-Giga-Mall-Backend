@@ -34,8 +34,16 @@ export async function seedFeatured(
   ];
 
   for (const data of samples) {
-    const featured = featuredRepository.create(data);
-    await featuredRepository.save(featured);
-    console.log(`Created featured item: ${featured.name}`);
+    // Check if featured item already exists by name and url combination
+    const existing = await featuredRepository.findOne({ 
+      where: { name: data.name, url: data.url } 
+    });
+    if (!existing) {
+      const featured = featuredRepository.create(data);
+      await featuredRepository.save(featured);
+      console.log(`Created featured item: ${featured.name}`);
+    } else {
+      console.log(`Featured item already exists: ${data.name}`);
+    }
   }
 }

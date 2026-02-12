@@ -656,9 +656,15 @@ export async function seedDine(
   ;
 
   for (const dine of sampleDine) {
-    const dineEntity = dineRepository.create(dine);
-    await dineRepository.save(dine);
-    console.log(`Created dine: ${dine.name}`);
+    // Check if dine already exists by slug
+    const existing = await dineRepository.findOne({ where: { slug: dine.slug } });
+    if (!existing) {
+      const dineEntity = dineRepository.create(dine);
+      await dineRepository.save(dineEntity);
+      console.log(`Created dine: ${dine.name}`);
+    } else {
+      console.log(`Dine already exists: ${dine.slug}`);
+    }
   }
 }
 

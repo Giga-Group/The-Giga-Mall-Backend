@@ -72,8 +72,16 @@ export async function seedJobs(dataSource: DataSource): Promise<void> {
   ];
 
   for (const data of sampleJobs) {
-    const job = jobRepository.create(data);
-    await jobRepository.save(job);
-    console.log(`Created job: ${job.jobTitle}`);
+    // Check if job already exists by jobTitle
+    const existing = await jobRepository.findOne({ 
+      where: { jobTitle: data.jobTitle } 
+    });
+    if (!existing) {
+      const job = jobRepository.create(data);
+      await jobRepository.save(job);
+      console.log(`Created job: ${job.jobTitle}`);
+    } else {
+      console.log(`Job already exists: ${data.jobTitle}`);
+    }
   }
 }

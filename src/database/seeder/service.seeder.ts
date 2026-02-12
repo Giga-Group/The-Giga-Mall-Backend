@@ -176,9 +176,15 @@ export async function seedServices(
   ];
 
   for (const data of samples) {
-    const service = serviceRepository.create(data);
-    await serviceRepository.save(service);
-    console.log(`Created service: ${service.name}`);
+    // Check if service already exists by slug
+    const existing = await serviceRepository.findOne({ where: { slug: data.slug } });
+    if (!existing) {
+      const service = serviceRepository.create(data);
+      await serviceRepository.save(service);
+      console.log(`Created service: ${service.name}`);
+    } else {
+      console.log(`Service already exists: ${data.slug}`);
+    }
   }
 }
 

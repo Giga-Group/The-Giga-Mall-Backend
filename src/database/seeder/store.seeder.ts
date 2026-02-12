@@ -2682,9 +2682,15 @@ export async function seedStores(
   ];
 
   for (const storeData of sampleStores) {
-    const store = storeRepository.create(storeData);
-    await storeRepository.save(store);
-    console.log(`Created store: ${store.name}`);
+    // Check if store already exists by slug
+    const existing = await storeRepository.findOne({ where: { slug: storeData.slug } });
+    if (!existing) {
+      const store = storeRepository.create(storeData);
+      await storeRepository.save(store);
+      console.log(`Created store: ${store.name}`);
+    } else {
+      console.log(`Store already exists: ${storeData.slug}`);
+    }
   }
 }
 

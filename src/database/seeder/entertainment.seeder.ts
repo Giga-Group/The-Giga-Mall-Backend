@@ -126,9 +126,15 @@ export async function seedEntertainment(
   ];
 
   for (const data of samples) {
-    const entertainment = entertainmentRepository.create(data);
-    await entertainmentRepository.save(entertainment);
-    console.log(`Created entertainment: ${entertainment.name}`);
+    // Check if entertainment already exists by slug
+    const existing = await entertainmentRepository.findOne({ where: { slug: data.slug } });
+    if (!existing) {
+      const entertainment = entertainmentRepository.create(data);
+      await entertainmentRepository.save(entertainment);
+      console.log(`Created entertainment: ${entertainment.name}`);
+    } else {
+      console.log(`Entertainment already exists: ${data.slug}`);
+    }
   }
 }
 
