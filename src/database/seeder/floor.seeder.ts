@@ -19,10 +19,18 @@ export async function seedFloors(
   const floorsMap: Record<string, Floor> = {};
 
   for (const floorName of floorNames) {
-    const floor = floorRepository.create({ floorName });
-    const savedFloor = await floorRepository.save(floor);
-    console.log(`Created floor: ${floorName}`);
-    floorsMap[floorName] = savedFloor;
+    // Check if floor already exists
+    let floor = await floorRepository.findOne({ where: { floorName } });
+    
+    if (!floor) {
+      floor = floorRepository.create({ floorName });
+      floor = await floorRepository.save(floor);
+      console.log(`Created floor: ${floorName}`);
+    } else {
+      console.log(`Floor already exists: ${floorName}`);
+    }
+    
+    floorsMap[floorName] = floor;
   }
 
   return floorsMap;
