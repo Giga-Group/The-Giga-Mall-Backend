@@ -17,6 +17,7 @@ import { CareersModule } from './modules/careers/careers.module';
 import { MoviesModule } from './modules/movies/movies.module';
 import { OffersModule } from './modules/offers/offers.module';
 import { MallMapModule } from './modules/mall-map/mall-map.module';
+import { VisitUsModule } from './modules/visit-us/visit-us.module';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { MallMapModule } from './modules/mall-map/mall-map.module';
     MoviesModule,
     OffersModule,
     MallMapModule,
+    VisitUsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

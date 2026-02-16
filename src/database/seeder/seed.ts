@@ -11,6 +11,7 @@ import { seedMovies } from './movie.seeder';
 import { seedOffers } from './offer.seeder';
 import { seedUploadedSvgs } from './uploaded-svg.seeder';
 import { seedProjects } from './project.seeder';
+import { seedVisitUs } from './visit-us.seeder';
 
 async function seed() {
   try {
@@ -64,6 +65,10 @@ async function seed() {
 
     // Seed projects
     await seedProjects(connectionSource);
+    console.log('');
+
+    // Seed visit-us locations
+    await seedVisitUs(connectionSource, floorsMap);
     console.log('');
 
     console.log('✓ Seeding completed successfully!');
