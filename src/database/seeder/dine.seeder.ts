@@ -107,7 +107,7 @@ export async function seedDine(
   },
   {
     slug: 'chachajee',
-    name: 'Chachajee',
+    name: 'Chacha Jee',
     description: 'A beloved local favorite serving delicious traditional dishes with a modern twist.',
     logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/chachajee logo.jpg',
     backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/dine/chacha%20jee%20web.JPG',
@@ -263,7 +263,7 @@ export async function seedDine(
   },
   {
     slug: 'gloria-jeans-coffees',
-    name: 'Gloria Jean\'s Coffees',
+    name: 'Gloria Jeans',
     description: 'Established in 1979, Gloria Jean\'s Coffees offers premium coffee blends, chillers, and delicious pastries. Experience the perfect cup of coffee in a welcoming atmosphere.',
     logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/GloriaJean\'sCoffeesLogo.png',
     backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/dine/gloria%20web.JPG',
@@ -523,7 +523,7 @@ export async function seedDine(
   },
   {
     slug: 'pepes-piri-piri',
-    name: 'Pepe\'s Piri Piri',
+    name: 'Pepe\'s Peri',
     description: 'A fast-food restaurant specializing in Piri Piri chicken, offering flame-grilled chicken, wings, wraps, burgers, and combo deals. Enjoy delicious Texan wraps, family platters, and happy hour specials with flavorful Piri Piri seasoning.',
     logo: '/logo/PepesPiriPiriLogo.png',
     backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/dine/pepes%20piri%20web.JPG',
@@ -549,7 +549,7 @@ export async function seedDine(
   },
   {
     slug: 'pizza-n-pasta',
-    name: 'Pizza n Pasta',
+    name: 'Pizza n\' Pasta',
     description: 'A fast-food restaurant offering delicious pizzas, pasta, burgers, subs, and salads. Enjoy XL pizzas, crunch burgers, zinger burgers, sub sandwiches, and combo deals. Perfect for families and groups with winter specials and party deals.',
     logo: '/logo/pizzanpastalogo.png',
     backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/dine/pizza%20n%20pasta%20web.JPG',
@@ -562,7 +562,7 @@ export async function seedDine(
   },
   {
     slug: 'potato-factory',
-    name: 'The Potato Factory',
+    name: 'Potato Factory',
     description: 'A specialty snack stall offering delicious fries in various styles. Enjoy original fries, twister fries, and other potato specialties served fresh and crispy. Perfect for a quick snack or side dish.',
     logo: '',
     backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/dine/potato%20factory%20web.JPG',

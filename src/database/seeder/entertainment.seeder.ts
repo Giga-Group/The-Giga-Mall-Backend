@@ -11,7 +11,7 @@ export async function seedEntertainment(
   const samples: Partial<Entertainment>[] = [
     {
       slug: 'cinepax',
-      name: 'Cinepax Cinema',
+      name: 'Cinepax',
       description:
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/CinepaxLogo.png',
@@ -29,7 +29,7 @@ export async function seedEntertainment(
     },
     {
       slug: 'bowling-alley',
-      name: 'Bowling Alley',
+      name: 'Round 3 Bowling Alley',
       description:
         'Strike up some fun at our modern bowling alley! Perfect for families, friends, and corporate events. Enjoy state-of-the-art lanes, scoring systems, and a vibrant atmosphere.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/Round3BowlingAlleyLogo.png',

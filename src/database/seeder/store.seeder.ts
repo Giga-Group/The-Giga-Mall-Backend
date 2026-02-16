@@ -939,7 +939,7 @@ export async function seedStores(
     },
     {
       slug: 'cougar',
-      name: 'Couger',
+      name: 'Cougar',
       description: 'A well-known fashion brand offering modern and comfortable clothing for men, women, and kids, combining everyday style with quality fabrics and contemporary designs.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/cougar.jpg',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/shops/couger web.JPG',
@@ -1159,7 +1159,7 @@ export async function seedStores(
     },
     {
       slug: 'jaffer-jees',
-      name: 'Jafferjees',
+      name: 'Jaffer Jees',
       description: 'A heritage leather goods company in Pakistan. They are renowned for their luxury, handcrafted leather products, including high-quality bags, briefcases, wallets, and sophisticated travel accessories.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/jaffer jees.jpg',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/shops/jafferjees web.JPG',
@@ -1198,7 +1198,7 @@ export async function seedStores(
     },
     {
       slug: 'kef-diamonds',
-      name: 'KefDiamonds',
+      name: 'Kef Diamond',
       description: 'A luxury diamond jewelry manufacturer and retailer. Since its establishment at Giga Mall in 2019, it has specialized in real, high-quality diamonds set in 18KT gold (white, rose, and yellow). They offer a lifetime warranty on their collection of engagement rings, bangles, and necklaces.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/kef dimond.jpg',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/shops/kef diamonds web.JPG',
@@ -1250,7 +1250,7 @@ export async function seedStores(
     },
     {
       slug: 'limelight',
-      name: 'Limelight',
+      name: 'Lime Light',
       description: 'A leading fashion retail brand on the Ground Floor offering a wide variety of unstitched and ready-to-wear eastern and western apparel. They are known for their affordable yet trendy collections that include shirts, trousers, scarves, and accessories.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/lime light.jpg',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/shops/limelite web.JPG',

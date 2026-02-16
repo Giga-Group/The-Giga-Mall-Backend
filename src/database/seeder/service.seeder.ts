@@ -28,7 +28,7 @@ export async function seedServices(
     },
     {
       slug: 'd-watson',
-      name: 'D watson',
+      name: 'D Watson',
       description:
         'A trusted health and beauty retailer offering skincare, cosmetics, personal care products, and wellness essentials.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/DwastsonLogo.png',
@@ -44,7 +44,7 @@ export async function seedServices(
     },
     {
       slug: 'dubai-islamic',
-      name: 'Dubai Islamic',
+      name: 'Dubai Islamic Bank',
       description:
         'Full-service Islamic banking with Sharia-compliant financial solutions. Open your account, apply for loans, and access all banking services.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/dubai islamic bank.jpeg',
@@ -77,13 +77,13 @@ export async function seedServices(
     },
     {
       slug: 'al-raj',
-      name: 'Al Raj',
+      name: 'Al Raj Currency Exchange',
       description:
-        'Premium banking services with comprehensive financial solutions. Personal and business banking with dedicated customer service.',
+        'Professional currency exchange services for all major currencies. We buy and sell currencies at competitive rates. Also offering international money transfer services through Western Union, MoneyGram, and Ria Money Transfer. Convenient and secure currency exchange for all your travel and business needs.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/AlRajLogo.png',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Services/Al Raj web.JPG',
       mobileViewImage: null,
-      category: 'Bank',
+      category: 'Currency Exchange',
       contact: {
         phone: '+971-50-501-8610',
       },
@@ -111,7 +111,7 @@ export async function seedServices(
     },
     {
       slug: 'aesthetics-and-dental-works',
-      name: 'Aesthetics and Dental Works',
+      name: 'Aesthetic Dental and Skin Care',
       description:
         'Dental Clinic & Cosmetic Centre offering comprehensive dental and aesthetic services. Services include Dental Implants/Bridges, Dentures/Crowns, Dental cleaning & whitening, Fixed Braces, Hydrafacial/Chemical peel, PRP for Hair & face, and Full body whitening. Experience expert care for your dental and cosmetic needs.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/aesthetic and dental works.jpg',
@@ -127,7 +127,7 @@ export async function seedServices(
     },
     {
       slug: 'imc',
-      name: 'IMC Integrative Medical Center',
+      name: 'Integrated Medical Center',
       description:
         'Integrative Medical Center offering comprehensive dental care, holistic skin care, and advanced IV therapies. Services include Integrative Dental Care, Holistic Skin Care, Whitening Injections, Glutathione Drips, Skin Brightening Shots, Fat Loss Drips, Stamina Boosters, Immunity Support Drips, IV Probiotics & Peptides, Nutritional Intravenous Therapy, NAD+ Glutathione Therapy, IV for Anti Aging, and Male Hormone Enhancers. Your family dental clinic and skin care destination.',
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/IMC.jpg',
