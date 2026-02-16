@@ -21,8 +21,8 @@ export async function seedServices(
       contact: {
         phone: '+971-50-501-8610',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['LG'],
+      floorId: floorsMap['LG']?.id,
       mapPosition: { x: 30, y: 40 },
       isTopPick: true,
     },
@@ -38,8 +38,8 @@ export async function seedServices(
       contact: {
         phone: '+971-50-501-8610',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['LG'],
+      floorId: floorsMap['LG']?.id,
       mapPosition: { x: 35, y: 45 },
     },
     {
@@ -54,8 +54,8 @@ export async function seedServices(
       contact: {
         phone: '+971-50-501-8610',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['LG'],
+      floorId: floorsMap['LG']?.id,
       isTopPick: true,
       mapPosition: { x: 40, y: 50 },
     },
@@ -71,8 +71,8 @@ export async function seedServices(
       contact: {
         phone: '+971-50-501-8610',
       },
-      floor: floorsMap['1st'],
-      floorId: floorsMap['1st']?.id,
+      floor: floorsMap['LG'],
+      floorId: floorsMap['LG']?.id,
       mapPosition: { x: 45, y: 55 },
     },
     {
@@ -87,8 +87,8 @@ export async function seedServices(
       contact: {
         phone: '+971-50-501-8610',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['Mezzanine'],
+      floorId: floorsMap['Mezzanine']?.id,
       mapPosition: { x: 50, y: 60 },
     },
     {
@@ -99,7 +99,7 @@ export async function seedServices(
       logo: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/logo/derma orchard.jpg',
       backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Services/derma orchid web.JPG',
       mobileViewImage: '/Services/derma orchid mobile.JPG',
-      category: 'Clinic',
+      category: 'Clinic', 
       contact: {
         phone: '+92-332-9785371',
         email: 'info@dermaorchid.com',
@@ -121,8 +121,8 @@ export async function seedServices(
       contact: {
         phone: '+92-333-5545887',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['2A'],
+      floorId: floorsMap['2A']?.id,
       mapPosition: { x: 60, y: 70 },
     },
     {
@@ -137,8 +137,8 @@ export async function seedServices(
       contact: {
         phone: '+92-51-6107253'
       },
-      floor: floorsMap['2nd'],
-      floorId: floorsMap['2nd']?.id,
+      floor: floorsMap['2A'],
+      floorId: floorsMap['2A']?.id,
       mapPosition: { x: 65, y: 75 },
     },
     {
