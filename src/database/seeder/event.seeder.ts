@@ -40,7 +40,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/upcoming/upcoming2.jpg',
+      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/upcoming/upcoming2.JPG',
     },
     {
       startDate: '1st January 2025',
