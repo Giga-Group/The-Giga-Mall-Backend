@@ -64,13 +64,7 @@ export class CreateStoreDto {
   @IsOptional()
   acceptsGiftCard?: boolean;
 
-  @ApiProperty({ example: 'Fashion', required: false })
-  @IsString()
+  @ApiProperty({ example: ['Men', 'Women'], required: false, type: [String] })
   @IsOptional()
-  category?: string;
-
-  @ApiProperty({ example: 'Multi-Brand Fashion', required: false })
-  @IsString()
-  @IsOptional()
-  subcategory?: string;
+  categories?: string[];
 }

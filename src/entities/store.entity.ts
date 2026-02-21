@@ -59,11 +59,8 @@ export class Store {
   @Column({ default: false })
   acceptsGiftCard: boolean;
 
-  @Column({ nullable: true })
-  category: string;
-
-  @Column({ nullable: true })
-  subcategory: string;
+  @Column('simple-array', { nullable: true })
+  categories: string[];
 
   @Column({ default: false })
   isTopPick: boolean;

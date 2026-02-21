@@ -13,7 +13,6 @@ export class StoresService {
   async findAll(
     search?: string,
     category?: string,
-    subcategory?: string,
     isTopPick?: boolean,
     limit: number = 10,
   ) {
@@ -29,21 +28,9 @@ export class StoresService {
       );
     }
 
-    // Category filter
+    // Category filter - check if category exists in the categories array
     if (category) {
-      queryBuilder.andWhere('store.category = :category', { category });
-    }
-
-    // Subcategory filter (only works if category is selected)
-    if (subcategory) {
-      if (!category) {
-        throw new BadRequestException(
-          'Subcategory filter requires a category to be selected',
-        );
-      }
-      queryBuilder.andWhere('store.subcategory = :subcategory', {
-        subcategory,
-      });
+      queryBuilder.andWhere(':category = ANY(store.categories)', { category });
     }
 
     // isTopPick filter

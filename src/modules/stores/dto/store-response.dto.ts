@@ -64,11 +64,8 @@ export class StoreResponseDto {
   @ApiProperty({ example: false })
   acceptsGiftCard: boolean;
 
-  @ApiProperty({ example: 'fashion', required: false, nullable: true })
-  category: string | null;
-
-  @ApiProperty({ example: 'mens-wear', required: false, nullable: true })
-  subcategory: string | null;
+  @ApiProperty({ example: ['Men', 'Women'], required: false, nullable: true, type: [String] })
+  categories: string[] | null;
 
   @ApiProperty({ example: true })
   isTopPick: boolean;
