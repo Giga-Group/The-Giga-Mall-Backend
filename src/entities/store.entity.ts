@@ -59,7 +59,7 @@ export class Store {
   @Column({ default: false })
   acceptsGiftCard: boolean;
 
-  @Column('simple-array', { nullable: true })
+  @Column('text', { array: true, nullable: true })
   categories: string[];
 
   @Column({ default: false })
