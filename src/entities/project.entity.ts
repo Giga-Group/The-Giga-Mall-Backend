@@ -6,13 +6,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export enum ProjectStatus {
-  PLANNING = 'PLANNING',
-  IN_PROGRESS = 'IN_PROGRESS',
-  COMPLETED = 'COMPLETED',
-  ON_HOLD = 'ON_HOLD',
-}
-
 @Entity('projects')
 export class Project {
   @PrimaryGeneratedColumn()
@@ -30,21 +23,14 @@ export class Project {
   @Column({ nullable: true })
   category: string;
 
-  @Column({
-    type: 'enum',
-    enum: ProjectStatus,
-    default: ProjectStatus.IN_PROGRESS,
-  })
-  status: ProjectStatus;
-
   @Column({ nullable: true })
   location: string;
 
   @Column('text', { array: true, default: [] })
   images: string[];
 
-  @Column('jsonb', { nullable: true })
-  details: any;
+  @Column({ nullable: true })
+  linkUrl: string;
 
   @Column({ type: 'boolean', default: false })
   isCompleted: boolean;

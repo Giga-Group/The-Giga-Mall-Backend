@@ -3,10 +3,8 @@ import {
   IsNotEmpty,
   IsOptional,
   IsArray,
-  IsEnum,
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { ProjectStatus } from '../../../entities/project.entity';
 
 export class CreateProjectDto {
   @ApiProperty({ example: 'giga-mall-wtc' })
@@ -29,11 +27,6 @@ export class CreateProjectDto {
   @IsOptional()
   category?: string;
 
-  @ApiProperty({ enum: ProjectStatus, required: false })
-  @IsEnum(ProjectStatus)
-  @IsOptional()
-  status?: ProjectStatus;
-
   @ApiProperty({ example: 'Giga City, Islamabad', required: false })
   @IsString()
   @IsOptional()
@@ -45,7 +38,8 @@ export class CreateProjectDto {
   @IsOptional()
   images?: string[];
 
-  @ApiProperty({ required: false })
+  @ApiProperty({ example: 'https://example.com/project', required: false })
+  @IsString()
   @IsOptional()
-  details?: any;
+  linkUrl?: string;
 }
