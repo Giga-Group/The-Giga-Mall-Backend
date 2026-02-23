@@ -6,6 +6,7 @@ dotenv.config();
 const dataSource = new DataSource({
   type: 'postgres',
   url: process.env.DATABASE_URL, // Complete connection string: postgresql://username:password@host:port/database
+  ssl: process.env.DATABASE_URL?.includes('supabase') ? { rejectUnauthorized: false } : false,
   entities: [__dirname + '/../entities/*.entity.{ts,js}'],
   migrations: [__dirname + '/migrations/*.{ts,js}'],
   synchronize: false,
