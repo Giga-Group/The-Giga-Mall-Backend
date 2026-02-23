@@ -21,7 +21,7 @@ import { VisitUsModule } from './modules/visit-us/visit-us.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
+    ConfigModule.forRoot({ 
       isGlobal: true,
       load: [typeorm],
     }),
