@@ -22,8 +22,8 @@ export async function seedEntertainment(
         phone: '+971-50-501-8599',
         email: 'info@cinepax.com',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['2nd'],
+      floorId: floorsMap['2nd']?.id,
       mapPosition: { x: 25, y: 40 },
       hasOffers: true,
     },
@@ -87,8 +87,8 @@ export async function seedEntertainment(
       contact: {
         phone: '+971-50-501-8599',
       },
-      floor: floorsMap['Ground'],
-      floorId: floorsMap['Ground']?.id,
+      floor: floorsMap['2nd'],
+      floorId: floorsMap['2nd']?.id,
       mapPosition: { x: 40, y: 50 },
     },
     {
