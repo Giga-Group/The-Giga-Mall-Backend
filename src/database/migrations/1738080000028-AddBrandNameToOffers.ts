@@ -15,8 +15,8 @@ export class AddBrandNameToOffers1738080000028 implements MigrationInterface {
       ALTER TABLE "offers" 
       ALTER COLUMN "type" TYPE text[] USING 
       CASE 
-        WHEN "type" IS NULL THEN NULL
-        ELSE ARRAY["type"]::text
+        WHEN "type" IS NULL THEN NULL::text[]
+        ELSE ARRAY["type"]::text[]
       END
     `);
   }
