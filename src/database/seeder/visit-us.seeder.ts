@@ -14,8 +14,8 @@ export async function seedVisitUs(
       name: 'Carrefour',
       description:
         'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour web.JPG',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour mobile.JPG',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour web.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour mobile.webp',
       category: 'Grocery',
       contact: {
         phone: '+971-50-501-8610',
@@ -30,8 +30,8 @@ export async function seedVisitUs(
       name: 'Cinepax',
       description:
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.webp',
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -46,8 +46,8 @@ export async function seedVisitUs(
       name: 'Funcity',
       description:
         'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20Horizontal.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20mobile.webp',
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8599',

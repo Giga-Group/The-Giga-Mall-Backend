@@ -15,7 +15,7 @@ export async function seedEntertainment(
       description:
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/CinepaxLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Cinepax/c1.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Cinepax/c1.webp',
       mobileViewImage: null,
       category: 'Cinema',
       contact: {
@@ -33,8 +33,8 @@ export async function seedEntertainment(
       description:
         'Strike up some fun at our modern bowling alley! Perfect for families, friends, and corporate events. Enjoy state-of-the-art lanes, scoring systems, and a vibrant atmosphere.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/Round3BowlingAlleyLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/bowling%203.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/bowling%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/bowling%203.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/bowling%20mobile.webp',
       category: 'Sports & Recreation',
       contact: {
         phone: '+971-50-501-8599',
@@ -48,9 +48,9 @@ export async function seedEntertainment(
       name: 'VI Rides Arcade',
       description:
         'Get ready for an adrenaline rush at VI Rides Arcade! Featuring the latest arcade games, simulators, and interactive experiences for all ages.',
-      logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/Virides.jpg',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VI%20Rides%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VI%20Rides%20mobile.jpg',
+      logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/Virides.webp',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VI%20Rides%20Horizontal.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VI%20Rides%20mobile.webp',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -65,8 +65,8 @@ export async function seedEntertainment(
       description:
         'Step into the future of entertainment at VR Kings! Immerse yourself in virtual reality experiences, from thrilling adventures to creative simulations.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/VRKingsLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VR%20Kings%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VR%20Kings%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VR%20Kings%20Horizontal.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/VR%20Kings%20mobile.webp',
       category: 'Arcade & Gaming',
       contact: {
         phone: '+971-50-501-8599',
@@ -81,8 +81,8 @@ export async function seedEntertainment(
       description:
         'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/FunCityLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20Horizontal.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20mobile.webp',
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8599',
@@ -97,8 +97,8 @@ export async function seedEntertainment(
       description:
         'Embark on a cinematic journey at SpaceCraft! Premium movie experience with cutting-edge technology, luxury seating, and an immersive atmosphere.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/SpaceCraftLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/SpaceCraft%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/SpaceCraft%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/SpaceCraft%20Horizontal.webp',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/SpaceCraft%20mobile.webp',
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -113,7 +113,7 @@ export async function seedEntertainment(
       description:
         'All aboard the Fun Express! Enjoy a delightful train ride through the mall, perfect for families and children. A fun and memorable experience for visitors of all ages.',
       logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/FunExpressTrainLogo.png',
-      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/train%20web.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/train%20web.webp',
       mobileViewImage: null,
       category: 'Family Entertainment',
       contact: {

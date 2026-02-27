@@ -12,7 +12,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Celebrate Culture Day at Giga Mall from 30th January to 1st February 2026. Enjoy vibrant cultural performances, traditional music, and family-friendly activities.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/events/upcoming11.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/events/upcoming11.webp',
     },
     
     {
@@ -22,7 +22,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming8.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming8.webp',
     },
     {
       startDate: '25th December 2025',
@@ -31,7 +31,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming10.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming10.webp',
     },
     {
       startDate: '1st January 2025',
@@ -40,7 +40,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming2.JPG',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming2.webp',
     },
     {
       startDate: '1st January 2025',
@@ -49,7 +49,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming7.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming7.webp',
     },
     
     {
@@ -59,7 +59,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming5.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming5.webp',
     },
     {
       startDate: '1st January 2025',
@@ -68,7 +68,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming6.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming6.webp',
     },
     {
       startDate: '1st January 2025',
@@ -77,7 +77,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Stay tuned for exciting updates and news from Giga Mall.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming4.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming4.webp',
     },
   ];
 
