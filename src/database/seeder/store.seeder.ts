@@ -955,7 +955,7 @@ export async function seedStores(
       description: 'One of Pakistan\'s most esteemed retail brands, renowned for its high-quality eastern wear including unstitched fabrics and ready-to-wear fashion with intricate embroidery and elegant designs.',
       backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/shops/cross stitch web.webp',
       mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/shops/cross stitch mobile.webp',
-      logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/croos stitch.webp',
+      logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/croos stich.webp',
       categories: ['Women'],
       contact: { phone: '+971-50-501-8610' },
       floor: floorsMap['Ground'],
