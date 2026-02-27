@@ -8,7 +8,7 @@ import { seedFeatured } from './featured.seeder';
 import { seedEvents } from './event.seeder';
 import { seedJobs } from './job.seeder';
 import { seedMovies } from './movie.seeder';
-import { seedOffers } from './offer.seeder';
+import { seedoffers } from './offer.seeder';
 import { seedUploadedSvgs } from './uploaded-svg.seeder';
 import { seedProjects } from './project.seeder';
 import { seedVisitUs } from './visit-us.seeder';
@@ -52,7 +52,7 @@ async function seed() {
     console.log('');
 
     // Seed offers
-    await seedOffers(connectionSource);
+    await seedoffers(connectionSource);
     console.log('');
 
     // Seed jobs

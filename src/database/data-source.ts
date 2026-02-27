@@ -6,6 +6,7 @@ dotenv.config();
 export default new DataSource({
   type: 'postgres',
   url: process.env.DATABASE_URL, // Complete connection string: postgresql://username:password@host:port/database
+  ssl: process.env.DATABASE_URL?.includes('supabase') ? { rejectUnauthorized: false } : false,
 
   // ✅ Dynamically load all entity files from centralized `src/entities`
   entities: [__dirname + '/../entities/*.entity.{ts,js}'],

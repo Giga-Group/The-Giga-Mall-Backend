@@ -14,8 +14,8 @@ export async function seedVisitUs(
       name: 'Carrefour',
       description:
         'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
-      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Services/Carrefour web.JPG',
-      mobileViewImage: null,
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour web.JPG',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Services/Carrefour mobile.JPG',
       category: 'Grocery',
       contact: {
         phone: '+971-50-501-8610',
@@ -30,8 +30,8 @@ export async function seedVisitUs(
       name: 'Cinepax',
       description:
         'Experience the latest blockbusters in luxury at Cinepax Cinema. State-of-the-art screens, premium sound systems, and comfortable seating make every movie experience unforgettable.',
-      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Cinepax/c1.jpg',
-      mobileViewImage: null,
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Cinepax/c1.jpg',
       category: 'Cinema',
       contact: {
         phone: '+971-50-501-8599',
@@ -46,8 +46,8 @@ export async function seedVisitUs(
       name: 'Funcity',
       description:
         'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
-      backgroundImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/Funcity%20Horizontal.jpg',
-      mobileViewImage: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Entertain/Funcity%20mobile.jpg',
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20Horizontal.jpg',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Entertain/Funcity%20mobile.jpg',
       category: 'Family Entertainment',
       contact: {
         phone: '+971-50-501-8599',
@@ -61,8 +61,8 @@ export async function seedVisitUs(
       name: 'Modal Appartments',
       description:
         'Explore our model apartments showcasing the finest in residential design and lifestyle. Experience premium living spaces with modern amenities and elegant interiors.',
-      backgroundImage: null,
-      mobileViewImage: null,
+      backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/model%20appartments/stay1.jpeg',
+      mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/model%20appartments/stay1.jpeg',
       category: 'Real Estate',
       contact: {
         phone: '+971-50-501-8610',

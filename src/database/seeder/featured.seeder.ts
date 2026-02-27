@@ -8,25 +8,25 @@ export async function seedFeatured(
 
   const samples: Partial<FeaturedItem>[] = [
     {
-      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Featured/Projects/p5.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Featured/Projects/p5.jpg',
       name: 'GoldCrest View',
       description: 'Luxury Lifestyle Premium Location',
       url: 'https://www.gigagroup.com/project-single/1',
     },
     {
-      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Featured/Projects/p3.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Featured/Projects/p3.jpg',
       name: 'Goldcrest View',
       description: 'Luxury Lifestyle Premium Location',
       url: 'https://www.gigagroup.com/project-single/1',
     },
     {
-      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Featured/Projects/p6.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Featured/Projects/p6.jpg',
       name: 'GoldCrest View',
       description: 'Luxury Lifestyle Premium Location',
       url: 'https://www.gigagroup.com/project-single/1',
     },
     {
-      image: 'https://rawcdn.githack.com/RazaisHere/svgs/refs/heads/main/images/Featured/Projects/p11.jpg',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/Featured/Projects/p11.jpg',
       name: 'GoldCrest View',
       description: 'Luxury Lifestyle Premium Location',
       url: 'https://www.gigagroup.com/project-single/1',
