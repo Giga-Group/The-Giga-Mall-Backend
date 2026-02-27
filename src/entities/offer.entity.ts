@@ -24,7 +24,10 @@ export class Offer {
   slug: string;
 
   @Column({ nullable: true })
-  type?: string;
+  brandName?: string;
+
+  @Column('text', { array: true, nullable: true })
+  type?: string[];
 
   @Column('varchar')
   startDate: string;
