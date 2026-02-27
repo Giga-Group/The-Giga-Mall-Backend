@@ -486,7 +486,7 @@ export async function seedDine(
     slug: 'jelly-factory',
     name: 'Jelly Factory',
     description: 'A vibrant candy and ice cream cart offering a wide selection of colorful candies, jellies, gummy treats, slushies, and ice cream. Discover sweet delights from our Jelly Factory and cool treats from our Ice Cream Stop.',
-    logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/jelly%20factory.jpeg',
+    logo: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/logo/jelly%20factory.webp',
     backgroundImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/dine/Jelly%20Factory%20web.webp',
     mobileViewImage: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/dine/Jelly%20Factory%20mobile.webp',
     category: 'Ice Cream',
