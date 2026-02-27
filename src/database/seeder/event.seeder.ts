@@ -12,7 +12,7 @@ export async function seedEvents(dataSource: DataSource): Promise<void> {
       description:
         'Celebrate Culture Day at Giga Mall from 30th January to 1st February 2026. Enjoy vibrant cultural performances, traditional music, and family-friendly activities.',
       navigateLink: 'https://www.facebook.com/GigaMallWTCIsb',
-      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/events/upcoming11.webp',
+      image: 'https://rawcdn.githack.com/Giga-Group/The-Giga-Mall-Media/refs/heads/main/up%20coming/upcoming11.webp',
     },
     
     {
